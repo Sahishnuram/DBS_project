@@ -1,0 +1,60 @@
+{%load static%}
+<style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #f0f0f0;
+  }
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  .btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .btn-primary {
+    background-color: #4CAF50;
+    color: #fff;
+  }
+  .btn-primary:hover {
+    background-color: #3e8e41;
+  }
+</style>
+<table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Role</th>
+        <th>Department</th>
+        <th>HR ID</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for employee in empdata %}
+      <tr>
+        <td>{{ employee.empid }}</td>
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.role }}</td>
+        <td>{{ employee.department }}</td>
+        <td>{{ employee.hrid }}</td>
+        <td>
+          <a href="{% url 'delemployee' employee.empid %}" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this employee?')">Delete</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>

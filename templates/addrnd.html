@@ -1,0 +1,5 @@
+<form method="post" style="width: 300px; margin: 0 auto;">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Add Research_Papers" style="display: block; margin-top: 10px;">
+</form>

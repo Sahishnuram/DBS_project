@@ -1,0 +1,100 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cloud</title>
+        <link rel="stylesheet" href="{% static 'css/cld.css' %}">
+    </head>
+    <body>
+        <header>
+            <div class="left">
+              <img src="{% static 'images/prof.jpg' %}" alt="Profile Picture" class="profile-pic">
+              <div class="dropdown">
+                <button class="dropdown-button">Cloud</button>
+                <div class="dropdown-content">
+                  <a href="{% url 'hr'%}">Human Resource</a>
+                  <a href="{% url 'emp'%}">Employee Performance</a>
+                  <a href="{% url 'rnd'%}">Research and Development</a>
+                  <a href="#">Outsourcing</a>
+                  <a href="#">Finance</a>
+                </div>
+              </div>
+            </div>
+            <div class="right">
+              <button class="setting-button">Setting</button>
+              <button class="logout-button">Logout</button>
+            </div>
+          </header>
+
+        <main> 
+            <h2>Cloud Services</h2>
+            <div class="con">
+                <div class="con1">
+                <div class="box">
+                <p><b>Infrastructure as a Service (IaaS)</b><br>
+                    Flexible virtualized computing resources<br>
+                    Price: $X/month<br>
+                    Ongoing Services: Service Monitoring, Security Updates<br>
+                    Upcoming Service Ideas: Enhanced Scalability Features<br>
+                    No. of Servers Present: XX</p>
+                </div>
+                <div class="box">
+                    <p><b>Development and deployment environment</b><br>
+                        Price: $Y/month<br>
+                        Ongoing Services: Continuous Integration, Deployment Automation<br>
+                        Upcoming Service Ideas: Integration with Third-party APIs<br>
+                        No. of Servers Present: YY</p>
+                </div>
+                <div class="box">
+                    <p><b>Software as a Service (SaaS)</b><br>
+                        Hosted software applications accessible over the internet<br>
+                        Price: $Z/month<br>
+                        Ongoing Services: Regular Updates, Technical Support<br>
+                        Upcoming Service Ideas: Mobile App Integration<br>
+                        No. of Servers Present: ZZ</p>
+                </div></div>
+                <div class="con2">
+                    <div class="box">
+                        <p><b>Cloud Engineers</b><br>
+                          {%for emp in empdata%}                          
+                            {{emp.name}}   -   {{emp.role}}<br>                          
+                          {% endfor %}  
+                        </p>
+                    </div>
+                    <div class="box">
+                        <p><b>Resources Information</b></p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia sapiente nulla ipsum. Doloribus id reiciendis ex molestias qui. Blanditiis laborum consequuntur nobis autem cum, molestias dolore corporis explicabo tenetur repellendus.</p>
+                    </div>
+                </div>
+            </div>  
+            <br><br>
+            <hr color="white" size="2px">
+            <br>
+            <center>
+                <div class="final1">
+                    <div class="hr-contact-box">
+                      <h2 class="hr-contact-heading">Service Team</h2>
+                      <div class="hr-contact-scroll">
+                        {%for emp in empdata%}
+                        <div class="hr-contact-item">
+                          <img src="" alt={{emp.name}}>
+                        </div>
+                        {% endfor %}
+                      </div>
+                    </div>
+                  </div>
+            </center>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+              <div class="footer-left">
+                <p>&copy; 2024 Company Name</p>
+              </div>
+              <div class="footer-right">
+                <p>Privacy Policy | Terms of Use | Contact Us</p>
+              </div>
+            </div>
+          </footer>
+    </body>
+</html>

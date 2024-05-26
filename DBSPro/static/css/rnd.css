@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      color: white;
+      padding: 10px;
+    }
+    
+    .left {
+      display: flex;
+      align-items: center;
+    }
+    
+    .profile-pic {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropdown-button {
+      background-color: transparent;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    .dropdown-content a:hover {background-color: #f1f1f1}
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    
+    .right {
+      display: flex;
+    }
+    
+    .setting-button, .logout-button {
+      background-color: grey;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin: 0 10px;
+      width: 60px;
+      height: 30px;
+      border-color: none;
+      border-radius: 50px;
+    } 
+  
+  .setting-button:hover, .logout-button:hover{
+      background-color: #333;
+      text-decoration: underline;
+    }
+
+
+/* main */
+main{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+    background-image: linear-gradient(#FDFCFB, #E2D1C3);
+    min-height: 1000px;
+  }
+
+.first{
+    padding-left: 2rem;
+    padding-top: 2rem;
+}
+
+.first h2{
+    text-decoration: underline;
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    background-color: white;
+    height: 300px;
+    width: 1100px;
+    padding: 1rem;
+    margin-left: 13rem;
+    margin-top: 2rem;
+    border:#333 solid 2px;
+    /* Add any additional styling */
+  }
+  
+  .scroll-box {
+    display: inline-block;
+    flex: 0 0 auto;
+    width: 200px; /* Adjust the width as needed */
+    height: 200px; /* Adjust the height as needed */
+    margin: 10px; /* Add some spacing */
+    background-color: #ddd; /* Add some background color */
+    text-align: center;
+    line-height: 190px; /* Center the text vertically */
+    border-radius: 50px;
+    /* Add any additional styling */
+  }
+
+  .scroll-box:hover{
+    border: solid 2px gold;
+  }
+
+  .con{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .case-study {
+    margin-top: 2rem;
+   background-color: white;
+   width: 600px;
+  }
+
+  .case-study:hover{
+    border: solid 2px gold;
+    border-radius: 50px;
+  }
+  
+  .case-study h2 {
+    padding: 1rem;
+    text-decoration: underline;
+  }
+  
+  .case-study-content {
+    display: flex;
+    /* Add any additional styling */
+  }
+  
+  .case-study-content img {
+    width: 300px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    /* Add any additional styling */
+  }
+  
+  .case-study-text {
+    margin-left: 20px; /* Add some spacing between the image and text */
+    /* Add any additional styling */
+  }
+
+  .cs-container {
+    width: 800px;   
+    margin: 0 auto;
+    background-color: white;
+  }
+  
+  .cs-heading {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .cs-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .cs-content img {
+    width: 40%;
+    height: auto;
+  }
+  
+  .cs-text {
+    width: 50%;
+  }
+  
+  .cs-text p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+/* footer */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-right {
+    display: flex;
+    align-items: center;
+  }

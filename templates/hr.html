@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Human Resources Department</title>
+        <link rel="stylesheet" href="{% static 'css/hr.css' %}">
+    </head>
+    <body>
+        <header>
+            <div class="left">
+              <img src="{% static 'images/prof.jpg'%}" alt="Profile Picture" class="profile-pic">
+              <div class="dropdown">
+                <button class="dropdown-button">Human Resources Department</button>
+                <div class="dropdown-content">
+                  <a href="#">HR Department</a>
+                  <a href="#">IT Department</a>
+                  <a href="#">Marketing Department</a>
+                  <a href="#">Sales Department</a>
+                </div>
+              </div>
+            </div>
+            <div class="right">
+              <a href="{% url 'addEmployee' %}">Add Employee</a>
+              <a href="{% url 'employee_list' %}">Employee Operations</a>
+              <button class="setting-button">Setting</button>
+              <button class="logout-button">Logout</button>
+            </div>
+          </header>
+          <main>
+            <br>
+            <p>Welcome to the HR Page</p>
+            <br>
+            <div class="mainc">
+              <div class="imain">
+                <a href="https://www.501commons.org/resources/tools-and-best-practices/human-resources/sample-employee-handbook-national-council-of-nonprofits"><img src="{% static 'images/emp_handbook.jpg'%}" height="150px" width="150px" alt="Employee Handbook"></a>
+                <p><br>Employee<br>Handbook</p>
+              </div>
+              <div class="pmain"><p>Take a look!<br><br> A comprehensive guide outlining company policies, procedures, and expectations regarding conduct, benefits, leave <br>and other relevant topics.</p></div>
+            </div>
+            <div class="empc">
+              <div class="one">
+                <div class="benefits-box">
+                  <h2 class="benefits-heading">Employee Benefits</h2>
+                  <div class="benefits-content">
+                    <p>Detailed information about employee benefits, including health insurance plans, retirement savings options, paid time off, and any other perks available to employees.</p>
+                    <ul>
+                      <li>Health Insurance</li>
+                      <li>Dental Insurance</li>
+                      <li>Vision Insurance</li>
+                      <li>Retirement Savings Plan</li>
+                      <li>Paid Time Off</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="two">
+                <div>Employee Benefits and Compensation</div>
+              </div>
+              <div class="three">
+                <div class="benefits-box">
+                  <h2 class="benefits-heading">Payroll and Compensation</h2>
+                  <div class="benefits-content">
+                    <p>Resources and tools for understanding payroll processes, accessing pay stubs, and information about compensation structures.</p>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="finalc">
+              <div class="final1">
+                <div class="hr-contact-box">
+                  <h2 class="hr-contact-heading">HR Contact</h2>
+                  <div class="hr-contact-scroll">
+                    <div class="hr-contact-item">
+                      <img src="{%static 'images/22N257.jpg'%}" alt="HR Manager 1">
+                    </div>
+                    <div class="hr-contact-item">
+                      <img src="{%static 'images/22N244.jpg'%}" alt="HR Manager 2">
+                    </div>
+                    <div class="hr-contact-item">
+                      <img src="{%static 'images/67.png'%}" alt="HR Manager 3">
+                    </div>
+                    <div class="hr-contact-item">
+                      <img src="{%static 'images/22N203.jpg'%}" alt="HR Manager 4">
+                    </div>
+                    <div class="hr-contact-item">
+                      <img src="{%static 'images/22N264.jpg'%}" alt="HR Manager 5">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="final2">
+                <h3>Resources</h3>
+                <p>Internal Job Openings<br>
+                  Employee Recognition Programs<br>
+                  Career Development Resources<br>
+                  Legal Compliance and Employee Rights</p>
+              </div>
+            </div>
+          </main>
+          <footer>
+            <div class="footer-content">
+              <div class="footer-left">
+                <p>&copy; 2024 Company Name</p>
+              </div>
+              <div class="footer-right">
+                <p>Privacy Policy | Terms of Use | Contact Us</p>
+              </div>
+            </div>
+          </footer>
+    </body>
+</html>

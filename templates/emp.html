@@ -1,0 +1,112 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Employee </title>
+        <link rel="stylesheet" href="{% static 'css/emp.css' %}">
+    </head>
+
+    <body>
+        <header>
+            <div class="left">
+              <img src="{% static 'images/prof.jpg' %}" alt="Profile Picture" class="profile-pic">
+              <div class="dropdown">
+                <button class="dropdown-button">Employee</button>
+                <div class="dropdown-content">
+                  <a href="{% url 'hr' %}">Human Resource</a>
+                  <a href="{% url 'cld' %}">Cloud</a>
+                  <a href="{% url 'rnd' %}">Research and Development</a>
+                  <a href="#">Outsourcing</a>
+                  <a href="#">Finance</a>
+                </div>
+              </div>
+            </div>
+            <div class="right">
+              <button class="setting-button">Setting</button>
+              <button class="logout-button">Logout</button>
+            </div>
+          </header>
+
+          <main>
+            <h2> Employee List</h2>
+            
+            <div class="table">
+                <table style="width:640px; margin:auto; border: 1px solid black; border-collapse: collapse;">
+                    <tr>
+                      <th style="border: 1px solid black;">Employee Name</th>
+                      <th style="border: 1px solid black;">Department</th>
+                      <th style="border: 1px solid black;">Role</th>
+                      <th style="border: 1px solid black;">HR_Responsible</th>
+                    </tr>
+                    {%for emplo in empdata%}
+                    <tr>
+                      <th style="border: 1px solid black;">{{emplo.name}}</th>
+                      <th style="border: 1px solid black;">{{emplo.department}}</th>
+                      <th style="border: 1px solid black;">{{emplo.role}}</th>
+                      <th style="border: 1px solid black;">{{emplo.hrid}}</th>
+                    </tr>
+                    {% endfor %}
+                  </table>
+                  
+            </div>
+            <br>
+            <hr color="black" size="3px">
+            <br>
+            <div class="con">
+                <div class="t">
+                    <div class="h">
+                        <p><b>Training and Development</b></p>
+                    </div>
+                    <div class="c">
+                    <br>
+                    <p>Provide opportunities for employees to enhance their skills and knowledge through training programs and development initiatives.</p>
+                    <br>
+                    <hr color="grey" size="1px"><br>
+                    <p>Training Program  1 - Details<br>
+                        Training Program  2 - Details<br>
+                        Training Program  3 - Details<br>
+                        Training Program  4 - Details<br>
+                        Training Program  5 - Details<br>
+                        Training Program  6 - Details</p>
+                    </div>
+                </div>
+                <div class="t">
+                    <div class="h">
+                        <p><b>Feedback</b></p>
+                    </div>
+                    <div class="c">
+                    <br>
+                    <p>Provide constructive feedback to employees to help them grow and develop their skills.</p>
+                    <br>
+                    <hr color="grey" size="1px"><br>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <hr color="black" size="3px">
+            <br>
+            <div class="con">
+                <div class="att">
+                    <h2>Month Wise Employee Attendance</h2>
+                    <img src="{% static 'images/emp_att.png'%}" alt="emp Attendance" width="500px">
+                </div>
+                <div class="per">
+                    <h2>Monthly Employee Performance</h2>
+                    <img src="{% static 'images/emp_per.png'%}" alt="employee Performance" width="500px">
+                </div>
+            </div>
+          </main>
+
+          <footer>
+            <div class="footer-content">
+              <div class="footer-left">
+                <p>&copy; 2024 Company Name</p>
+              </div>
+              <div class="footer-right">
+                <p>Privacy Policy | Terms of Use | Contact Us</p>
+              </div>
+            </div>
+          </footer>
+    </body>
+</html>
